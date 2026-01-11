@@ -50,6 +50,29 @@ ralph_start({
 })
 ```
 
+### State File Example (`.opencode/ralph-state.json`)
+
+The plugin maintains the loop state in a JSON file within your project's `.opencode` directory:
+
+```json
+{
+  "active": true,
+  "prompt": "Run the tests and fix bugs.",
+  "completionPromise": "DONE",
+  "iterations": 2,
+  "maxIterations": 10,
+  "lastRun": 1704987654321
+}
+```
+
+### Command Line Usage
+
+While the plugin automates the loop, you can also manually trigger a run with a specific prompt using the OpenCode CLI:
+
+```bash
+opencode run --prompt "Run tests and fix all bugs. Output 'DONE' when complete."
+```
+
 ## Configuration
 
 The plugin uses the `opencode` CLI command. Ensure `opencode` is in your system PATH.
